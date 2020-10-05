@@ -14,7 +14,7 @@ public class Task02 extends StandardInputTask {
         // Ввод данных осуществляется в Standard Input, для проверки различных вариантов входных параметров
         int hour = INPUT_SCANNER.nextInt();
 
-        getGreetingByHour(hour);
+        System.out.println(getGreetingByHour(hour));
     }
 
     /**
@@ -27,6 +27,18 @@ public class Task02 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        if (hour > 24 || hour < 0 ){
+            return null;
+        } else if ( hour <= 5){
+            return "Good night";
+        } else if ( hour <= 11){
+            return "Good morning";
+        } else if ( hour <= 17 ){
+            return "Good day";
+        } else  {
+            return "Good evening";
+        }
+
     }
+
 }

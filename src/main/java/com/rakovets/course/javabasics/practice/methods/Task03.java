@@ -16,8 +16,7 @@ public class Task03 extends StandardInputTask {
         int currentHealthPoint = INPUT_SCANNER.nextInt();
         int maxHealthPoint = INPUT_SCANNER.nextInt();
 
-        String colorHealthPoint = getColorHealthPoint(currentHealthPoint, maxHealthPoint);
-        System.out.println(colorHealthPoint);
+        getColorHealthPoint(currentHealthPoint, maxHealthPoint);
     }
 
     /**
@@ -33,17 +32,6 @@ public class Task03 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        int percentOfHealthPoint = ( currentHealthPoint * 100 ) / maxHealthPoint;
-        if (currentHealthPoint <= 0 || currentHealthPoint > maxHealthPoint){
-            return null;
-        } else if ( percentOfHealthPoint < 25 ){
-            return "RED";
-        } else if (percentOfHealthPoint < 50){
-            return "ORANGE";
-        } else if (percentOfHealthPoint < 75){
-            return "YELLOW";
-        } else {
-            return "GREEN";
-        }
+        return null;
     }
 }

@@ -30,6 +30,14 @@ public class Task01 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return false;
+        if (sizeTop >= positionPlayerByDamage){
+            System.out.println("Игрок вошел");
+            return true;
+        }
+        else {
+            System.out.println("Игрок не вошел");
+            return false;
+        }
+
     }
 }

@@ -29,7 +29,7 @@ class Task03Test {
         );
     }
 
-    @ParameterizedTest(name = "Current HP: {0}")
+    @ParameterizedTest(name = "Current HP: {0}. Where max: {1}")
     @MethodSource("testProvider")
     @DisplayName("Color HP")
     void test(int currentHealthPoint, int maxHealthPoint, String expected) {

@@ -15,7 +15,7 @@ public class Task05 extends StandardInputTask {
         // Ввод данных осуществляется в Standard Input, для проверки различных вариантов входных параметров
         byte monthNumber = INPUT_SCANNER.nextByte();
 
-        getNameMonth(monthNumber);
+        System.out.println(getNameMonth(monthNumber));
     }
 
     /**
@@ -25,6 +25,32 @@ public class Task05 extends StandardInputTask {
      * @return месяц на английском языке (UPPER CASE)
      */
     static String getNameMonth(byte monthNumber) {
+        switch (monthNumber){
+            case 1:
+                return "JANUARY";
+            case 2:
+                return "FEBRUARY";
+            case 3:
+                return "MARCH";
+            case 4:
+                return "APRIL";
+            case 5:
+                return "MAY";
+            case 6:
+                return "JUNE";
+            case 7:
+                return "JULY";
+            case 8:
+                return "AUGUST";
+            case 9:
+                return "SEPTEMBER";
+            case 10:
+                return "OCTOBER";
+            case 11:
+                return "NOVEMBER";
+            case 12:
+                return "DECEMBER";
+        }
         return null;
     }
 }

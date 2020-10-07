@@ -52,5 +52,71 @@ public class Task12 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        String zodiacSign = getZodiacSign(day, month);
+        String chineseZodiac = getChineseZodiac(year);
+        System.out.println(String.format("Zodiac Sign: %s. Chinese Zodiac: %s", zodiacSign, chineseZodiac));
+
     }
+    static String getZodiacSign(int day, int month) {
+        int resultDayAndMonth = (month * 100) + day;
+        String zodiacSign;
+
+        if(resultDayAndMonth >= 121 && resultDayAndMonth <= 219){
+            zodiacSign = "Water-bearer";
+        } else if(resultDayAndMonth >= 220 && resultDayAndMonth <= 320){
+            zodiacSign = "Fish";
+        } else if(resultDayAndMonth >= 321 && resultDayAndMonth <= 420){
+            zodiacSign = "Ram";
+        } else if(resultDayAndMonth >= 421 && resultDayAndMonth <= 520){
+            zodiacSign = "Bull";
+        } else if(resultDayAndMonth >= 521 && resultDayAndMonth <= 621){
+            zodiacSign = "Twins";
+        } else if(resultDayAndMonth >= 622 && resultDayAndMonth <= 722){
+            zodiacSign = "Crab";
+        } else if(resultDayAndMonth >= 723 && resultDayAndMonth <= 822){
+            zodiacSign = "Lion";
+        } else if(resultDayAndMonth >= 823 && resultDayAndMonth <= 921){
+            zodiacSign = "Maiden";
+        } else if(resultDayAndMonth >= 922 && resultDayAndMonth <= 1022){
+            zodiacSign = "Scales";
+        } else if(resultDayAndMonth >= 1023 && resultDayAndMonth <= 1122){
+            zodiacSign = "Scorpion";
+        } else if(resultDayAndMonth >= 1123 && resultDayAndMonth <= 1221) {
+            zodiacSign = "Archer";
+        } else {
+            zodiacSign = "Goat";
+        }
+        return zodiacSign;
+    }
+    static String getChineseZodiac(int year) {
+        String chineseZodiac;
+        if (year % 12 == 11) {
+            chineseZodiac = "Ram";
+        } else if (year % 12 == 10) {
+            chineseZodiac = "Horse";
+        } else if (year % 12 == 9) {
+            chineseZodiac = "Snake";
+        } else if (year % 12 == 8){
+            chineseZodiac = "Dragon";
+        } else if (year % 12 == 7){
+            chineseZodiac = "Rabbit";
+        } else if (year % 12 == 6) {
+            chineseZodiac = "Tiger";
+        } else if (year % 12 == 5) {
+            chineseZodiac = "Ox";
+        } else if (year % 12 == 4) {
+            chineseZodiac = "Rat";
+        } else if (year % 12 == 3) {
+            chineseZodiac = "Pig";
+        } else if (year % 12 == 2) {
+            chineseZodiac = "Dog";
+        } else if (year % 12 == 1) {
+            chineseZodiac = "Rooster";
+        } else {
+            chineseZodiac = "Monkey";
+        }
+
+        return chineseZodiac;
+    }
+
 }

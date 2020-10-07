@@ -22,5 +22,12 @@ public class Task01 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+
+        int lineRows;
+        for(lineRows = 1; lineRows <= rows; lineRows++){
+            System.out.print(lineRows+"\n");
+
+        }
+
     }
 }

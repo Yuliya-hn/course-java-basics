@@ -25,5 +25,22 @@ public class Task02 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        printGeneratedArray(rows, headerRowEnable);
+    }
+    static void printGeneratedArray(int countRows, boolean headerRowEnable) {
+        int rowNumber = 1;
+        for (int i = 0; i < countRows; i++) {
+            if (i == 0) {
+                if (headerRowEnable) {
+                    System.out.print("\n");
+                    i++;
+                }
+                System.out.print(rowNumber);
+            } else {
+                System.out.print("\n" + rowNumber);
+            }
+            rowNumber++;
+
+        }
     }
 }

@@ -26,5 +26,17 @@ public class Task07 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        double currentDistance = startDistance;
+        double totalDistance = startDistance;
+        do {
+            if (startDistance == 0) {
+                break;
+            }
+            double percent = currentDistance  * (dailyProgress / 100);
+            currentDistance += percent;
+            totalDistance += currentDistance;
+        } while (currentDistance < finishDistance);
+        totalDistance = totalDistance - currentDistance; //remove last round
+        System.out.printf("%.2f", totalDistance);
     }
 }

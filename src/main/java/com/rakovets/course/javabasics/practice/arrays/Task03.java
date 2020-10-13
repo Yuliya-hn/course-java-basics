@@ -17,7 +17,8 @@ public class Task03 extends StandardInputTask {
         int[][] marks = nextArray(countDisciplines, countSemesters);
 
         // Вызов методов
-        getAverageMark(marks);
+
+        System.out.println(getAverageMark(marks).toString());
         getMinMark(marks);
         getMaxMark(marks);
     }
@@ -32,7 +33,17 @@ public class Task03 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        double[] averageMarByDisciplines = new double[marks.length];
+        for (int i = 0; i < marks.length; i++) {
+            double sumAverageMark = 0.0;
+            for (int j = 0; j < marks[i].length; j++) {
+                sumAverageMark += marks[i][j];
+            }
+            double divideAverageMark = sumAverageMark / marks[i].length;
+            double roundOffAverageMark = Math.round(divideAverageMark * 100.0) / 100.0;
+            averageMarByDisciplines[i] = roundOffAverageMark;
+        }
+        return averageMarByDisciplines;
     }
 
     /**
@@ -45,8 +56,19 @@ public class Task03 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        int[] minMarkByDisciplines = new int[marks.length];
+        for (int i = 0; i < marks.length; i++) {
+            int minMark = marks[i][0];
+            for (int j = 1; j < marks[i].length; j++) {
+                if (marks[i][j] < minMark){
+                    minMark = marks[i][j];
+                }
+            }
+            minMarkByDisciplines[i] = minMark;
+        }
+        return minMarkByDisciplines;
     }
+
 
     /**
      * Возвращает максимальну отметку по предметам за весь период обучения.
@@ -58,7 +80,18 @@ public class Task03 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        int[] maxMarkByDisciplines = new int[marks.length];
+
+        for (int i = 0; i < marks.length; i++) {
+            int maxMark = marks[i][0];
+            for (int j = 1; j < marks[i].length; j++) {
+                if (marks[i][j] > maxMark){
+                    maxMark = marks[i][j];
+                }
+            }
+            maxMarkByDisciplines[i] = maxMark;
+        }
+        return maxMarkByDisciplines;
     }
 
     private static int[][] nextArray(int countDisciplines, int countSemesters) {

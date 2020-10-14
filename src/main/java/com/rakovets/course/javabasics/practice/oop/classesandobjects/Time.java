@@ -6,7 +6,10 @@ public class Time {
     private int seconds;
 
     Time(int totalSeconds) {
-        totalSeconds =0;
+        this.hours = totalSeconds / 3600;
+        totalSeconds = totalSeconds - (hours * 3600);
+        this.minutes = totalSeconds / 60;
+        this.seconds = totalSeconds - (minutes * 60);
     }
 
     // Time myTime1 = new Time(0, 0, 20);
@@ -39,6 +42,10 @@ public class Time {
         this.seconds =seconds;
     }
     public int getTotalSeconds(){
+        int secondsInHours = this.hours * 3600;
+        int secondsInMinutes = this.minutes * 60;
+        int totalSeconds = this.seconds + secondsInHours + secondsInMinutes;
         return totalSeconds;
     }
+
 }

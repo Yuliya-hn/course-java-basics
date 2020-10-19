@@ -14,7 +14,8 @@ package com.rakovets.course.javabasics.practice.strings;
          return string.toUpperCase().trim();
      }
      public String getSubString(String string){
-         return string.substring(9,23);
+         int endIndex = string.length() > 23 ? 23 : string.length();
+         return string.substring(10, endIndex);
      }
      public String changeSmile(String string){
          return string.replace(":(",":)");
@@ -57,4 +58,23 @@ package com.rakovets.course.javabasics.practice.strings;
          }
          return strToArray;
      }
+     public String getAbbreviation(String name,String surname,String patronymic){
+         char firstLetterOfName = name.toUpperCase().charAt(0);
+         char firstLetterOfSurname = surname.toUpperCase().charAt(0);
+         char firstLetterOfPatronymic = patronymic.toUpperCase().charAt(0);
+         String abbreviation = firstLetterOfSurname+"."+firstLetterOfName+"."+firstLetterOfPatronymic;
+         return abbreviation;
+     }
+     public String getDigitSetFromString(String string) {
+         String digitSet = "";
+         for (int i = 0; i < string.length(); i++) {
+             char digit = string.charAt(i);
+             if (Character.isDigit(digit)) {
+                 digitSet += digit;
+             }
+         }
+         return digitSet;
+     }
+
+
 }

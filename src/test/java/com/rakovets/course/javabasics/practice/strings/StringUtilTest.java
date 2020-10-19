@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 public class StringUtilTest {
     private static StringUtil string;
     @BeforeAll
@@ -69,8 +71,18 @@ public class StringUtilTest {
     }
     @Test
     void getStringArrayTest(){
-        Assertions.assertEquals(new String[] {"he", "ll", " w", "or", "ld"}, string.getStringArray("hell world", 2));
+        Assertions.assertEquals(true, Arrays.equals(new String[] {"he", "ll", " w", "or", "ld"}, string.getStringArray("hell world", 2)));
     }
+    @Test
+    void getAbbreviationTest(){
+        Assertions.assertEquals( "H.Y.D",string.getAbbreviation("Yuliya","Hankovich","dref"));
+    }
+    @Test
+    void getDigitSetFromStringTest(){
+        Assertions.assertEquals( "6754562340",string.getDigitSetFromString("khjk 675 456jhkhkh2340"));
+    }
+
+
 
 
 

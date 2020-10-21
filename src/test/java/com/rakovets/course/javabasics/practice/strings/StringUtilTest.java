@@ -91,9 +91,10 @@ public class StringUtilTest {
         Assertions.assertEquals( "6754562340",string.getDigitSetFromString("khjk 675 456jhkhkh2340"));
     }
 
-
-
-
-
+    @Test
+    void getUniqueCharactersTest(){
+        Assertions.assertEquals( "п е с с и н ф м а и я",string.getUniqueCharacters("процессор", "информация"));
+        Assertions.assertEquals( "",string.getUniqueCharacters("test", "test"));
+    }
 
 }

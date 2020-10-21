@@ -77,5 +77,25 @@ package com.rakovets.course.javabasics.practice.strings;
          return digitSet;
      }
 
+     public String getUniqueCharacters(String word1, String word2) {
+         String uniqueCharacters = "";
+         word1 = word1.toLowerCase();
+         word2 = word2.toLowerCase();
+
+         for (int i = 0; i < word1.length(); i++) {
+             char character = word1.charAt(i);
+             if (word2.indexOf(character) < 0) {
+                uniqueCharacters += character + " ";
+             }
+         }
+
+         for (int i = 0; i < word2.length(); i++) {
+             char character = word2.charAt(i);
+             if (word1.indexOf(character) < 0) {
+                 uniqueCharacters += character + " ";
+             }
+         }
+         return uniqueCharacters.trim();
+     }
 
 }

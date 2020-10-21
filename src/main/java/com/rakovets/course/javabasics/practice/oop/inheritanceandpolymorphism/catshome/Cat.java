@@ -1,8 +1,8 @@
 package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.catshome;
 
 public class Cat {
-    String name;
-    public Cat( String name1){
+    private String name;
+    public Cat(String name1){
         name = name1;
     }
     public void meow(Person person){

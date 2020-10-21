@@ -68,6 +68,7 @@ public class StringUtilTest {
         Assertions.assertEquals( 6,string.getCountOfVowels("hello my supr pizza"));
         Assertions.assertEquals( 7,string.getCountOfVowels("hello my super pizza"));
         Assertions.assertEquals( 0,string.getCountOfVowels("hll m spr pzz"));
+        Assertions.assertEquals( 7,string.getCountOfVowels("HELLO MY SUPER PIZZA"));
     }
     @Test
     void howManySymbolsTest(){
@@ -79,16 +80,17 @@ public class StringUtilTest {
     void isWordPalindromeTest(){
         Assertions.assertEquals( false,string.isWordPalindrome("hello"));
         Assertions.assertEquals( true,string.isWordPalindrome("Анна"));
-        Assertions.assertEquals( false,string.isWordPalindrome(""));
     }
     @Test
     void getStringArrayTest(){
-        Assertions.assertEquals(true, Arrays.equals(new String[] {"he", "ll", " w", "or", "ld"}, string.getStringArray("hell world", 2)));
+        Assertions.assertEquals(true, Arrays.equals(new String[] {"he", "ll", "o ", "wo", "rl", "d!"}, string.getStringArray("hello world!", 2)));
+
     }
     @Test
     void getAbbreviationTest(){
-        Assertions.assertEquals( "I.I.I",string.getAbbreviation("Ivan","Ivanovich","Ivanov"));
-        Assertions.assertEquals( "I.I.I",string.getAbbreviation("ivan","ivanovich","ivanov"));
+        Assertions.assertEquals( "I.I.I",string.getAbbreviation("Ivan","Ivanov","Ivanovich"));
+        Assertions.assertEquals( "I.I",string.getAbbreviation("Ivan","Ivanov",""));
+        Assertions.assertEquals( "I.M.A",string.getAbbreviation("mikalai","ivanov","aleksandrovich"));
     }
     @Test
     void getDigitSetFromStringTest(){
@@ -101,6 +103,8 @@ public class StringUtilTest {
         Assertions.assertEquals( "l g u g e i f o r m t i o",string.getUniqueCharacters("language","information"));
         Assertions.assertEquals( "",string.getUniqueCharacters("test", "test"));
         Assertions.assertEquals( "6",string.getUniqueCharacters(" 12345", "123456 "));
+        Assertions.assertEquals( "",string.getUniqueCharacters("ABC", "abc"));
+        Assertions.assertEquals( "a b c d f g",string.getUniqueCharacters("ABC", "DFG"));
     }
 
 }

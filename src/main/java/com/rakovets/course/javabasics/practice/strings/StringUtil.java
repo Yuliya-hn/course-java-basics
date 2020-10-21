@@ -26,6 +26,7 @@ package com.rakovets.course.javabasics.practice.strings;
      }
 
      public int getCountOfVowels(String string){
+         string = string.toLowerCase();
          int counter = 0;
          for (int i = 0; i < string.length(); i++){
              char symbol = string.charAt(i);
@@ -62,9 +63,13 @@ package com.rakovets.course.javabasics.practice.strings;
      public String getAbbreviation(String name,String surname,String patronymic){
          char firstLetterOfName = name.toUpperCase().charAt(0);
          char firstLetterOfSurname = surname.toUpperCase().charAt(0);
-         char firstLetterOfPatronymic = patronymic.toUpperCase().charAt(0);
 
-         String abbreviation = firstLetterOfSurname+"."+firstLetterOfName+"."+firstLetterOfPatronymic;
+         String abbreviation = firstLetterOfSurname+"."+firstLetterOfName;
+
+         if (!patronymic.isEmpty()) {
+             abbreviation += "." + patronymic.toUpperCase().charAt(0);
+         }
+
          return abbreviation;
      }
      public String getDigitSetFromString(String string) {

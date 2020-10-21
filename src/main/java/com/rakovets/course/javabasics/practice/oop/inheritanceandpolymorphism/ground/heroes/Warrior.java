@@ -11,9 +11,8 @@ public class Warrior extends Hero {
     @Override
     public void attackEnemy(Enemy enemy) {
         System.out.println("The Warrior [" + this.getName() + "] is attack!");
-        enemy.takeDamage(100);
+        this.health -= enemy.takeDamage(100);
     }
-
     @Override
     public boolean isAlive() {
         return this.health > 0;

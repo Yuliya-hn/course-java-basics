@@ -12,7 +12,8 @@ public class Mag extends Hero {
     @Override
     public void attackEnemy(Enemy enemy) {
         System.out.println("The Mag [" + this.getName() + "] is attack!");
-        enemy.takeDamage(80);
+        this.health -= enemy.takeDamage(80);
+
     }
 
     @Override

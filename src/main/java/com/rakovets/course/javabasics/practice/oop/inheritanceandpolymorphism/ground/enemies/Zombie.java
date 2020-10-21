@@ -2,6 +2,7 @@ package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.g
 
 public class Zombie extends Enemy {
 
+    private boolean wasAlreadyDies = false;
     public Zombie(int health) {
         super(health, 15);
     }
@@ -14,8 +15,9 @@ public class Zombie extends Enemy {
     @Override
     public boolean isAlive() {
 
-        if (!super.isAlive() && Math.random() < 0.5) {
-           this.setHealth(1);
+        if (!super.isAlive() && !wasAlreadyDies) {
+           this.setHealth(20);
+           this.wasAlreadyDies = true;
         }
 
         return super.isAlive();

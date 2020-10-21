@@ -1,4 +1,4 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism;
+package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.catstest;
 
 import com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.catshome.Person;
 import com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.catshome.Siamese;

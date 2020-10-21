@@ -5,8 +5,8 @@ package com.rakovets.course.javabasics.practice.strings;
      public String getGlueString(String string1, String string2){
         return string1.concat(string2);
      }
-     public int getIndexOfSymbol(String string){
-         return string.indexOf(string);
+     public int getIndexOfSymbol(String string,String symbol){
+         return string.indexOf(symbol);
      }
      public boolean getEqualString(String string1, String string2){
          return string1.equals(string2);

@@ -21,7 +21,9 @@ public class StringUtilTest {
     }
     @Test
     void getIndexOfSymbolTest(){
-        Assertions.assertEquals("ы",string.getIndexOfSymbol("k"));
+        Assertions.assertEquals(2,string.getIndexOfSymbol("cat","t"));
+        Assertions.assertEquals(-1,string.getIndexOfSymbol("cat","g"));
+        Assertions.assertEquals(0,string.getIndexOfSymbol("cat",""));
     }
     @Test
     void getEqualStringTest(){

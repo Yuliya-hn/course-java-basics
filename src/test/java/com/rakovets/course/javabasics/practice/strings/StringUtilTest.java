@@ -26,9 +26,11 @@ public class StringUtilTest {
     @Test
     void getEqualStringTest(){
         Assertions.assertEquals(true,string.getEqualString("mood","mood"));
+        Assertions.assertEquals(true,string.getEqualString("my mood","my mood"));
         Assertions.assertEquals(false,string.getEqualString("mood","MOOD"));
         Assertions.assertEquals(false,string.getEqualString("mood","MoOd"));
         Assertions.assertEquals(false,string.getEqualString("mood",""));
+        Assertions.assertEquals(true,string.getEqualString("123","123"));
     }
     @Test
     void getUpperCaseStringAndTrimTest(){
@@ -36,33 +38,40 @@ public class StringUtilTest {
         Assertions.assertEquals("WORLD",string.getUpperCaseStringAndTrim("WoRld "));
         Assertions.assertEquals("WORLD",string.getUpperCaseStringAndTrim(" WORLD"));
         Assertions.assertEquals("HELLO WORLD",string.getUpperCaseStringAndTrim("  Hello world  "));
+        Assertions.assertEquals("",string.getUpperCaseStringAndTrim(""));
+        Assertions.assertEquals("WORLD",string.getUpperCaseStringAndTrim(" world "));
     }
     @Test
     void getSubStringTest(){
-        Assertions.assertEquals("WORLD",string.getSubString("sslslldlelell"));
-        Assertions.assertEquals("WORLD",string.getSubString("dkslx,cmvlee "));
+        Assertions.assertEquals("2345678912345",string.getSubString("12345678912345678912345"));
     }
     @Test
     void changeSmileTest(){
         Assertions.assertEquals("Hello:)",string.changeSmile("Hello:("));
         Assertions.assertEquals("Hello:)",string.changeSmile("Hello:)"));
         Assertions.assertEquals("Hello )",string.changeSmile("Hello )"));
-
+        Assertions.assertEquals("Hello :",string.changeSmile("Hello :"));
     }
     @Test
-    void chadngeSmileTest(){
-        Assertions.assertEquals("Hello:)",string.changeSmile("Hello:("));
-        Assertions.assertEquals("Hello:)",string.changeSmile("Hello:)"));
-        Assertions.assertEquals("Hello )",string.changeSmile("Hello )"));
+    void isWordBeginAndEndOfStringTest(){
+        Assertions.assertEquals(true,string.isWordBeginAndEndOfString("hello world hello","hello"));
+        Assertions.assertEquals(true,string.isWordBeginAndEndOfString("hello","hello"));
+        Assertions.assertEquals(false,string.isWordBeginAndEndOfString("Hello world hello","hello"));
+        Assertions.assertEquals(true,string.isWordBeginAndEndOfString("",""));
+
 
     }
     @Test
     void howManyVowelsTest(){
-        Assertions.assertEquals( 3,string.getCountOfVowels("deloo"));
+        Assertions.assertEquals( 6,string.getCountOfVowels("hello my supr pizza"));
+        Assertions.assertEquals( 7,string.getCountOfVowels("hello my super pizza"));
+        Assertions.assertEquals( 0,string.getCountOfVowels("hll m spr pzz"));
     }
     @Test
     void howManySymbolsTest(){
-        Assertions.assertEquals( 4,string.getCountOfSymbols("deloo,ss,ss! !"));
+        Assertions.assertEquals( 3,string.getCountOfSymbols("hello, my super pizza.!"));
+        Assertions.assertEquals( 5,string.getCountOfSymbols("hello, my super pizza.!!!"));
+        Assertions.assertEquals( 0,string.getCountOfSymbols("hello my super pizza"));
     }
     @Test
     void isWordPalindromeTest(){

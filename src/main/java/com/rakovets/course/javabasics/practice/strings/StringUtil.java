@@ -1,6 +1,7 @@
 package com.rakovets.course.javabasics.practice.strings;
 
  public class StringUtil {
+
      public String getGlueString(String string1, String string2){
         return string1.concat(string2);
      }

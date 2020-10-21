@@ -2,8 +2,8 @@ package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.g
 
 public class AngryTree extends Enemy{
 
-    public AngryTree(int health, int returnDamage) {
-        super(health, 65);
+    public AngryTree(int health) {
+        super(health, 20);
     }
 
     @Override

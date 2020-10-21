@@ -16,6 +16,9 @@ public abstract class Hero implements Mortal{
         return name;
     }
 
+    public int getHealth() {
+        return health;
+    }
 
     public abstract void attackEnemy(Enemy enemy);
 }

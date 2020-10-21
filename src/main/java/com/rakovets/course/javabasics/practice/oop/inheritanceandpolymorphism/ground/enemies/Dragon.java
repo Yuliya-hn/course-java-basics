@@ -2,7 +2,7 @@ package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.g
 
 public class Dragon extends Enemy{
 
-    public Dragon(int health, int returnDamage) {
+    public Dragon(int health) {
         super(health, 130);
     }
 

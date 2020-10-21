@@ -2,7 +2,7 @@ package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.g
 
 public class Zombie extends Enemy {
 
-    public Zombie(int health, int returnDamage) {
+    public Zombie(int health) {
         super(health, 15);
     }
 

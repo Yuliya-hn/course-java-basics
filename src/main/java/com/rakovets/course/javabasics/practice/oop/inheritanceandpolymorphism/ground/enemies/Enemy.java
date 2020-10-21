@@ -27,7 +27,7 @@ public abstract class Enemy implements Mortal {
 
     @Override
     public boolean isAlive() {
-        return false;
+        return this.health > 0;
     }
 
 }

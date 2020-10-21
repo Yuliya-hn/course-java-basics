@@ -11,7 +11,7 @@ public class Archer extends Hero {
     @Override
     public void attackEnemy(Enemy enemy) {
         System.out.println("The Archer [" + this.getName() + "] is attack!");
-        enemy.takeDamage(50);
+        this.health -= enemy.takeDamage(50);
     }
 
     @Override

@@ -5,10 +5,12 @@ public class Cat {
     public Cat( String name1){
         name = name1;
     }
-    public void meow(){
+    public void meow(Person person){
+        person.changeHappiness( -5);
        System.out.println("Meow");
     }
-    public void purr(){
+    public void purr(Person person){
+        person.changeHappiness( 5);
         System.out.println("Purr");
     }
     public String getName(){

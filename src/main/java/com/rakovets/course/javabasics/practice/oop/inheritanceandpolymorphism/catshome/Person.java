@@ -1,18 +1,18 @@
 package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.catshome;
 
 public class Person {
-    int happiness;
-    public Person( int happiness){
+    double happiness;
+    public Person( double happiness){
         this.happiness = happiness;
     }
-    public int changeHappiness(int percentHappiness){
-        happiness = percentHappiness;
+    public double changeHappiness(double percentHappiness){
+        happiness = happiness + percentHappiness;
         return happiness;
     }
-    public int getHappiness(){
+    public double getHappiness(){
         return happiness;
     }
-    public void setHappiness(int happiness){
+    public void setHappiness(double happiness){
         this.happiness = happiness;
     }
 

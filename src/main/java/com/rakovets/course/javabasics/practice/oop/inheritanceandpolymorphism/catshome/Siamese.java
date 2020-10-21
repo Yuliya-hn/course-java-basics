@@ -6,12 +6,14 @@ public class Siamese extends Cat{
     }
 
     @Override
-    public void meow() {
+    public void meow(Person person) {
+        person.changeHappiness( -10);
         System.out.println("Miii");
     }
 
     @Override
-    public void purr() {
+    public void purr(Person person) {
+        person.changeHappiness( 10);
         System.out.println("Rrrr");
     }
 }

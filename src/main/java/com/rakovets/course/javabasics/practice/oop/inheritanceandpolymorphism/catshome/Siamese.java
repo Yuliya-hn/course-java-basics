@@ -13,7 +13,7 @@ public class Siamese extends Cat{
 
     @Override
     public void purr(Person person) {
-        person.changeHappiness( 10);
+        person.changeHappiness( 20);
         System.out.println("Rrrr");
     }
 }

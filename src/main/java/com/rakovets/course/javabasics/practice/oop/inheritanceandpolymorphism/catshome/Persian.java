@@ -7,13 +7,13 @@ public class Persian extends Cat{
 
     @Override
     public void meow(Person person) {
-        person.changeHappiness( - 3);
+        person.changeHappiness( -3);
         System.out.println("Muuu");
     }
 
     @Override
     public void purr(Person person) {
-        person.changeHappiness( 3);
+        person.changeHappiness( 6);
         System.out.println("Murr");
     }
 }

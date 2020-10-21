@@ -6,32 +6,26 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 public class CatTest {
 
     private static Person person;
     @BeforeAll
     static void init(){
         person = new Person(60);
-
     }
 
     @Test
     void testSingleCatObject() {
-        Cat testCat = new Cat("Мурка");
-        Assertions.assertEquals("Мурка", testCat.getName());
-        testCat.setName("Юя злая Мурка бья");
-        Assertions.assertEquals("Юя злая Мурка бья", testCat.getName());
+        Cat testCat = new Cat("Max");
+        Assertions.assertEquals("Max", testCat.getName());
+        testCat.setName("Mat");
+        Assertions.assertEquals("Mat", testCat.getName());
     }
-
     @Test
     void testCatBehavior() {
-        Cat testCat = new Cat("TestCatName");
-        Assertions.assertEquals("TestCatName", testCat.getName());
+        Cat testCat = new Cat("Mat");
 
         testCat.meow(person);
-
         Assertions.assertEquals(55, person.getHappiness());
 
         testCat.purr(person);

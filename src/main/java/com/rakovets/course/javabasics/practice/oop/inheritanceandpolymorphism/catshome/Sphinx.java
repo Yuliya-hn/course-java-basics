@@ -6,13 +6,13 @@ public class Sphinx extends Cat{
     }
     @Override
     public void meow(Person person) {
-        person.changeHappiness( - 15);
+        person.changeHappiness( -15);
         System.out.println("Myaso");
     }
 
     @Override
     public void purr(Person person) {
-        person.changeHappiness( 10);
+        person.changeHappiness( 25);
         System.out.println("Kurrr");
     }
 }

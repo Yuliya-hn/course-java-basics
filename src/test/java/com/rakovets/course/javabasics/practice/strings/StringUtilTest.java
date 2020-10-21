@@ -77,6 +77,7 @@ public class StringUtilTest {
     void isWordPalindromeTest(){
         Assertions.assertEquals( false,string.isWordPalindrome("hello"));
         Assertions.assertEquals( true,string.isWordPalindrome("Анна"));
+        Assertions.assertEquals( false,string.isWordPalindrome(""));
     }
     @Test
     void getStringArrayTest(){
@@ -84,17 +85,20 @@ public class StringUtilTest {
     }
     @Test
     void getAbbreviationTest(){
-        Assertions.assertEquals( "H.Y.D",string.getAbbreviation("Yuliya","Hankovich","dref"));
+        Assertions.assertEquals( "I.I.I",string.getAbbreviation("Ivan","Ivanovich","Ivanov"));
+        Assertions.assertEquals( "I.I.I",string.getAbbreviation("ivan","ivanovich","ivanov"));
     }
     @Test
     void getDigitSetFromStringTest(){
-        Assertions.assertEquals( "6754562340",string.getDigitSetFromString("khjk 675 456jhkhkh2340"));
+        Assertions.assertEquals( "3410017945",string.getDigitSetFromString("profitability = 3.4 + 10.0 - 17.9 = - 4.5%"));
+        Assertions.assertEquals( "",string.getDigitSetFromString("profitability = . + . - . = - .%"));
     }
 
     @Test
     void getUniqueCharactersTest(){
-        Assertions.assertEquals( "п е с с и н ф м а и я",string.getUniqueCharacters("процессор", "информация"));
+        Assertions.assertEquals( "l g u g e i f o r m t i o",string.getUniqueCharacters("language","information"));
         Assertions.assertEquals( "",string.getUniqueCharacters("test", "test"));
+        Assertions.assertEquals( "6",string.getUniqueCharacters(" 12345", "123456 "));
     }
 
 }

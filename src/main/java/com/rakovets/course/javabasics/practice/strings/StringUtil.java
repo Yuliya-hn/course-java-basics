@@ -63,6 +63,7 @@ package com.rakovets.course.javabasics.practice.strings;
          char firstLetterOfName = name.toUpperCase().charAt(0);
          char firstLetterOfSurname = surname.toUpperCase().charAt(0);
          char firstLetterOfPatronymic = patronymic.toUpperCase().charAt(0);
+
          String abbreviation = firstLetterOfSurname+"."+firstLetterOfName+"."+firstLetterOfPatronymic;
          return abbreviation;
      }

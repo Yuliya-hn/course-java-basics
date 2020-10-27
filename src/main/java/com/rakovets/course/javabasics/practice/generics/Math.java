@@ -87,7 +87,5 @@ public class Math<T extends Number & Comparable> {
         }
         return -1;
     }
-
-
 }
 

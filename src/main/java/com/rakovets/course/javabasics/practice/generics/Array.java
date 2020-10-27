@@ -13,7 +13,7 @@ public class Array<T extends Number & Comparable> {
     }
 
     public Array(int length) {
-        this.array = (T[]) new Object[length];
+        this.array = (T[]) new Number[length];
     }
 
     public void buildFromConsole() {

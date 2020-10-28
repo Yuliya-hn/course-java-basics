@@ -56,6 +56,4 @@ public class MathTest {
         Double[] testDouble = new Double[] {5.0, 5.2, 4.0, 4.3, 1.0};
         Assertions.assertEquals(2, testDoubleMath.binarySearchElement(testDouble,4.0));
     }
-
-
 }

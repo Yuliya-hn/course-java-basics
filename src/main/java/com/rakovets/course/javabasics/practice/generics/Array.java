@@ -53,6 +53,10 @@ public class Array<T extends Number & Comparable> {
         this.array = array;
     }
 
+    public T[] getArray() {
+        return this.array;
+    }
+
     public T getMax() {
         return (T) math.getMaxInArray(this.array);
     }

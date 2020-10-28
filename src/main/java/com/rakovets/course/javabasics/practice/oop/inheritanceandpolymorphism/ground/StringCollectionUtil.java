@@ -1,17 +1,22 @@
 package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground;
 
-import java.util.Collection;
-import java.util.List;
+
+import java.util.ArrayList;
 
 public class StringCollectionUtil {
-    public void resetWordsByLength(List<String> strings, Integer length) {
-
-        for (String i :strings ) {
-            System.out.println(i);
+    public void resetWordsByLength(ArrayList<String> strings, int length) {
+        for (int i = 0; i < strings.size(); i++) {
+            if (strings.get(i).length() == length) {
+                strings.set(i, "*");
+            }
         }
     }
 
-    public void test(Integer a) {
-
+    public void removeWordsByLength(ArrayList<String> strings,int length) {
+        for (int i = 0; i < strings.size(); i++) {
+            if (strings.get(i).length() == length) {
+                strings.remove(i);
+            }
+        }
     }
 }

@@ -1,17 +1,16 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground;
+package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground.stringCollectionUtil;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Demo {
     public static void main(String[] args) {
         StringCollectionUtil string = new StringCollectionUtil();
-        ArrayList<String> strings = new ArrayList<String>();
+        ArrayList<String> strings = new ArrayList<>();
         strings.add("Tom");
         strings.add("liza");
-        strings.add("Sonya");
         strings.add("Karina");
         strings.add("Tim");
+        strings.add("Sonya");
         strings.add("Vanya");
         strings.add("Yan");
 

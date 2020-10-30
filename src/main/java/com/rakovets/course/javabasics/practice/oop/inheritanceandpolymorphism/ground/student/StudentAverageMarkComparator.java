@@ -1,6 +1,4 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground;
-
-import com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground.studio.Actor;
+package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground.student;
 
 import java.util.Comparator;
 

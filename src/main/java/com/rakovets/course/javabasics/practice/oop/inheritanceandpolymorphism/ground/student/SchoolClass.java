@@ -1,4 +1,4 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground;
+package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground.student;
 
 import java.util.ArrayList;
 

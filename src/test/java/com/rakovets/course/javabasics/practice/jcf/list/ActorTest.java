@@ -1,4 +1,4 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground.studio.test;
+package com.rakovets.course.javabasics.practice.jcf.list;
 
 import com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground.studio.*;
 
@@ -22,8 +22,6 @@ public class ActorTest {
 
     @Test
     void testActorsWithSortByActorLastNameComparator() {
-        Actor actor = new Actor("ABC", "BCD", 2.5, 22);
-
         List<Actor> actors = new ArrayList<Actor>();
 
         actors.add(new Actor("ABC", "ABC", 2.5, 22));
@@ -41,8 +39,6 @@ public class ActorTest {
 
     @Test
     void testActorsWithSortByActorFeeComparator() {
-        Actor actor = new Actor("ABC", "BCD", 2.5, 22);
-
         List<Actor> actors = new ArrayList<Actor>();
 
         actors.add(new Actor("ABC", "ABC", 2.5, 22));
@@ -62,8 +58,6 @@ public class ActorTest {
 
     @Test
     void testActorsWithSortByActorAgeComparator() {
-        Actor actor = new Actor("ABC", "BCD", 2.5, 22);
-
         List<Actor> actors = new ArrayList<Actor>();
 
         actors.add(new Actor("ABC", "ABC", 2.5, 22));
@@ -83,8 +77,6 @@ public class ActorTest {
 
     @Test
     void testActorsWithSortByActorLastNameAndAgeComparator() {
-        Actor actor = new Actor("ABC", "BCD", 2.5, 22);
-
         List<Actor> actors = new ArrayList<Actor>();
 
         actors.add(new Actor("ABC", "ABC", 2.5, 22));
@@ -106,8 +98,6 @@ public class ActorTest {
 
     @Test
     void testActorsWithSortByActorFeeAndLastNameComparator() {
-        Actor actor = new Actor("ABC", "BCD", 2.5, 22);
-
         List<Actor> actors = new ArrayList<Actor>();
 
         actors.add(new Actor("ABC", "ABC", 2.5, 22));

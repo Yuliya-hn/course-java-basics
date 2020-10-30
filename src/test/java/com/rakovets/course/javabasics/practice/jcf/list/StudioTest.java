@@ -1,4 +1,4 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground.studio.test;
+package com.rakovets.course.javabasics.practice.jcf.list;
 
 import com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground.studio.*;
 import org.junit.jupiter.api.Assertions;

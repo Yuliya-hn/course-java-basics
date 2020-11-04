@@ -1,10 +1,11 @@
 package com.rakovets.course.javabasics.practice.exceptionhandling;
 
+import com.rakovets.course.javabasics.practice.exceptionhandling.customException.GetException;
+
 public class Task3 {
-    private double amount;
-    public static void getCath(int mun)
-            this.amount -= amount;
-
+    public void throwGetException() throws GetException {
+        throw new GetException("Test Error");
     }
-
 }
+
+

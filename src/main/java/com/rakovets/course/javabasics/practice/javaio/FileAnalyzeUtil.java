@@ -6,14 +6,13 @@ import java.util.ArrayList;
 public class FileAnalyzeUtil {
 
     public ArrayList<String> getLengthOfString(String pathFile)  {
-        ArrayList<String> listOfString = new ArrayList<String>();
+        ArrayList<String> listOfString = new ArrayList<>();
         try {
             File file = new File(pathFile);
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line = reader.readLine();
             while (line != null) {
                 listOfString.add(line);
-                System.out.println(line);
                 line = reader.readLine();
             }
         } catch (IOException ex) {
@@ -32,22 +31,18 @@ public class FileAnalyzeUtil {
         return false;
     }
 
-    public ArrayList<String> getLineWithVowel(String pathFile)  {
-        ArrayList<String> listOfString = new ArrayList<String>();
-        try {
-            File file = new File(pathFile);
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line = reader.readLine();
-            while (line != null) {
-                if (this.isVowel(line.charAt(0))) {
-                    listOfString.add(line);
-                    System.out.println(line);
+    public ArrayList<String> getWordsWithVowel(String pathFile)  {
+        ArrayList<String> listOfString = this.getLengthOfString (pathFile);
+        ArrayList<String> wordsWithVowel = new ArrayList<>();
+        for (String line: listOfString) {
+            String[] words = line.split(" ");
+
+            for (String word: words) {
+                if (!word.isEmpty() && this.isVowel(word.charAt(0))) {
+                    wordsWithVowel.add(word);
                 }
-                line = reader.readLine();
             }
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
         }
-        return listOfString;
+        return wordsWithVowel;
     }
 }

@@ -93,7 +93,6 @@ public class FileAnalyzeUtil {
                 }
                 mapOfFrequency.put(symbol, mapOfFrequency.get(symbol)+1);
             }
-
         }
         return mapOfFrequency;
     }
@@ -136,25 +135,20 @@ public class FileAnalyzeUtil {
         Map<String,Double> mapOfStudent = new HashMap<>();
         for (String line: listOfStudent) {
             String[] words = line.split(",");
-            ArrayList<Integer> arrayMarks = new ArrayList<>();
             double sum = 0;
             for (int i = 1; i < words.length; i++) {
                 try {
-                    int marks = Integer.parseInt(words[i]);
-                    arrayMarks.add(marks);
+                    int mark = Integer.parseInt(words[i]);
+                    sum+=mark;
                 } catch (NumberFormatException nfe) {
                     System.out.println("NumberFormatException: " + nfe.getMessage());
                 }
             }
-            for (Integer arrayMark : arrayMarks) {
-                sum = sum + arrayMark;
-            }
-            Double ovarage = sum / arrayMarks.size();
-            mapOfStudent.put(words[0],ovarage);
+            Double average = sum / (words.length-1);
+            mapOfStudent.put(words[0],average);
         }
         return mapOfStudent;
     }
-
 
 //    public ArrayList<String> getMaxCombinationOfNumbers(String pathFile)  {
 //        ArrayList<String> listOfString = this.getLengthOfString (pathFile);
@@ -180,6 +174,7 @@ public class FileAnalyzeUtil {
 //        }
 //        return WordsWithSameLetter;
 //    }
+
 
 
 }

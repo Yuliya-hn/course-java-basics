@@ -133,24 +133,27 @@ public class FileAnalyzeUtil {
 
     public Map <String,Double> getStudentPerformance (String pathFile)  {
         ArrayList<String> listOfStudent = this.getLengthOfString (pathFile);
-        Map<String,Double> mapOfStudent = null;
+        Map<String,Double> mapOfStudent = new HashMap<>();
         for (String line: listOfStudent) {
             String[] words = line.split(",");
-            int marks = 0;
-            for(int i = 1; i < words.length; i++) {
+            ArrayList<Integer> arrayMarks = new ArrayList<>();
+            double sum = 0;
+            for (int i = 1; i < words.length; i++) {
                 try {
-                    marks = Integer.parseInt(words[i]);
-                    marks += marks;
-                }catch (NumberFormatException nfe) {
+                    int marks = Integer.parseInt(words[i]);
+                    arrayMarks.add(marks);
+                } catch (NumberFormatException nfe) {
                     System.out.println("NumberFormatException: " + nfe.getMessage());
                 }
-                System.out.println(marks);
             }
-
+            for (Integer arrayMark : arrayMarks) {
+                sum = sum + arrayMark;
+            }
+            Double ovarage = sum / arrayMarks.size();
+            mapOfStudent.put(words[0],ovarage);
         }
         return mapOfStudent;
     }
-
 
 
 //    public ArrayList<String> getMaxCombinationOfNumbers(String pathFile)  {

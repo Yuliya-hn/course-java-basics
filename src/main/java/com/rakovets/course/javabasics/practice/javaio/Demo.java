@@ -12,8 +12,7 @@ public class Demo {
         //System.out.println(j.getWordsWithSameLetter(ff).toString());
         //System.out.println(j.getWordFrequency(ff).toString());
        // System.out.println(j.getWordFrequencyInAscending(ff).toString());
-
-        j.getStudentPerformance(ff);
+        System.out.println(j.getStudentPerformance(ff).toString());
 
     }
 }

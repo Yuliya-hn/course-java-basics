@@ -36,7 +36,7 @@ public class FileAnalyzeUtil {
         return false;
     }
 
-    public ArrayList<String> getWordsWithVowel(String pathFile)  {
+    public ArrayList<String> getWordsWithFirstVowel(String pathFile)  {
         ArrayList<String> listOfString = this.getLengthOfString (pathFile);
         ArrayList<String> wordsWithVowel = new ArrayList<>();
         for (String line: listOfString) {

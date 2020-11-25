@@ -20,15 +20,13 @@ public class FactoryThread implements Runnable {
 
                     // wait for start of Day
                     while (this.time.isNightNow() == true) {
-                        StandardOutputUtil.printlnWithTimeAndThread("Factory is waiting for start Day", AnsiColorCode.FG_GREEN_BOLD);
                         this.time.wait();
                     }
 
                     this.factory.createdDetails();
 
                     // wait for end of Day
-                    while (this.time.isNightNow() == false) {
-                        StandardOutputUtil.printlnWithTimeAndThread("Factory is waiting for end Day", AnsiColorCode.FG_GREEN_BOLD);
+                    while (this.time.isNightNow() == false && this.time.getRemainDays() != 0) {
                         this.time.wait();
                     }
                 }

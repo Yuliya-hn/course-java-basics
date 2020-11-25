@@ -11,7 +11,7 @@ public class TimeThread implements Runnable{
     public void run() {
         while (this.time.remainDays > 0) {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

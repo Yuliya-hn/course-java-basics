@@ -1,5 +1,7 @@
 package com.rakovets.course.javabasics.example.concurrency.threadsynchronization.model;
 
+import com.rakovets.course.javabasics.practice.concurrency.threadsynchronization.ProducerConsumer.Store;
+
 import java.util.Random;
 
 public class Consumer implements Runnable {
@@ -17,7 +19,7 @@ public class Consumer implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            store.get();
+           /// store.get();
         }
     }
 }

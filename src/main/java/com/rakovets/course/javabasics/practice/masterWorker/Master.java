@@ -1,17 +1,20 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground;
+package com.rakovets.course.javabasics.practice.masterWorker;
+import com.rakovets.course.javabasics.practice.masterWorker.SharedResource;
+import com.rakovets.course.javabasics.practice.masterWorker.ThreadWorker;
 import com.rakovets.course.javabasics.util.AnsiColorCode;
 import com.rakovets.course.javabasics.util.StandardOutputUtil;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class MasterWorker {
+public class Master {
     public static void main(String[] args)  {
         Scanner enter = new Scanner(System.in);
         int number = 0;
         SharedResource shared = new SharedResource();
         ThreadWorker thread = new ThreadWorker(shared);
         thread.start();
+
         while (true) {
             System.out.print("Please enter the number\n");
             try {

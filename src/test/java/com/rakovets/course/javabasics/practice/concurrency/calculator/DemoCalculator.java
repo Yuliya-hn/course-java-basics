@@ -1,10 +1,10 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground;
+package com.rakovets.course.javabasics.practice.concurrency.calculator;
 
-import javax.naming.PartialResultException;
+import com.rakovets.course.javabasics.practice.concurrency.parallelCalculator.ParallelCalculator;
+
 import java.util.ArrayList;
-import java.util.Random;
 
-public class Demo {
+public class DemoCalculator {
     public static void main(String[] args) throws InterruptedException {
         ParallelCalculator calculator = new ParallelCalculator();
 

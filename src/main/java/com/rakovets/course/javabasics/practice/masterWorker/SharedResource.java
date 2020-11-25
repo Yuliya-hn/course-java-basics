@@ -1,4 +1,4 @@
-package com.rakovets.course.javabasics.practice.oop.inheritanceandpolymorphism.ground;
+package com.rakovets.course.javabasics.practice.masterWorker;
 
 import java.util.LinkedList;
 import java.util.Queue;
